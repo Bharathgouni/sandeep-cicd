@@ -11,3 +11,7 @@
 
   - name: command module to copy to webapps
     command: docker cp ~/cd/application-latest.war tomcat:/usr/local/tomcat/webapps/
+    
+    
+  - name: to restart tomcat docker container after the deployment
+    command: docker restart tomcat
