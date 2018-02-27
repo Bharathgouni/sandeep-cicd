@@ -1,0 +1,15 @@
+--- 
+- hosts: tom
+  gather_facts: False
+  user: ec2-user
+  become: yes
+  become_method: sudo
+  - name: Deploy jar File
+    maven_artifact:
+    - group_id: sandeep.org 
+    - artifact_id: bayarea 
+    - extension: jar 
+    - repository_url=http://ec2-54-244-176-121.us-west-2.compute.amazonaws.com:8080/nexus-2.14.7-01/content/repositories/releases/ 
+    - username: admin 
+    - password: admin123 
+    - dest: /usr/share/tomcat/webapps/
