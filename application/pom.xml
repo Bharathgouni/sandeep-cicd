@@ -4,7 +4,7 @@
   <groupId>org.sandeep</groupId>
   <artifactId>application</artifactId>
   <packaging>war</packaging>
-  <version>1.0-release</version>
+  <version>1.0-SNAPSHOT</version>
   <name>application Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
