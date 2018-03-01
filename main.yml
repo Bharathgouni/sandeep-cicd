@@ -5,6 +5,20 @@
   become: true
 #  become_method: sudo
   tasks:
+ 
+#launching a docker container tomcat container 
+ - name: spinning up a docker tomcat container
+   docker_container:
+     name: tomcat
+     image: tomcat:latest
+     state: started
+     restart: yes
+     ports:
+      - "8080:8080"
+      
+ 
+  
+  
   - name: Deploy War File
     maven_artifact: group_id=org.sandeep artifact_id=application extension=war repository_url=http://ec2-54-244-176-121.us-west-2.compute.amazonaws.com:8080/nexus-2.14.7-01/content/repositories/snapshots/ username=admin password=admin123  dest=~/cd/
   
