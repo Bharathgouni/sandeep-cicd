@@ -6,16 +6,16 @@
 #  become_method: sudo
   tasks:
  
-#launching a docker container tomcat container 
- - name: spinning up a docker tomcat container
-   docker_container:
-     name: tomcat
-     image: tomcat:latest
-     state: started
-     restart: yes
-     ports:
-      - "8080:8080"
-      
+#downlaoding a tomcattar zip
+  - name: to make sure wget is installed
+    yum: name=wget state=installed
+    
+  - name: to download tarzip of tomcat using command module
+    shell: | 
+      cd ~
+      mkdir towget
+      wget 
+      cd
  
   
   
