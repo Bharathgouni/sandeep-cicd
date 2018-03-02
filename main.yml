@@ -14,8 +14,14 @@
     shell: | 
       cd ~
       mkdir towget
+      cd towget
       wget 
       cd
+   - name: to install tomcat 7
+     yum: name=tomcat7 state=installed
+     
+   - name: to install the tomcat other directories
+     command: yum install tomcat7-webapps tomcat7-docs-webapp tomcat7-admin-webapps -y
  
   
   
