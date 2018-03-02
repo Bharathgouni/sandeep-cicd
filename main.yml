@@ -28,7 +28,9 @@
    
    - name: to configure tomcat-users.xml
      copy: src=./tomcat-users.xml  dest=/etc/tomcat7/tomcat-users.xml
-
+   
+   - name: to restart tomcat
+     service: name=tomcat state=restart
 #   - name: to configure context.xml
 #     copy: src=./context.xml dest=/var/lib/tomcat7/webapps/manager/META-INF/context.xml
 
